@@ -55,3 +55,31 @@ FinTrack is a "Personal CFO" application designed to cure financial fragmentatio
 ## Deployment Strategy
 - **Backend Deployment**: The Node.js Express server is built to be easily containerized and deployed to AWS ECS, Heroku, or Vercel. Ensure `MONGO_URI` points to a cloud cluster (like MongoDB Atlas).
 - **Frontend Deployment**: The React Native app can be built into standalone binaries (.apk / .aab for Android, .ipa for iOS) using EAS Build (`eas build --profile production`) and pushed to Google Play and the App Store.
+
+## Seed the Database with Demo Data
+
+A fully featured seed script ships with the backend. It generates **60 days of realistic financial transactions**, 5 subscriptions (including an anomalous charge to trigger AI detection), and 4 savings goals — all linked to a ready-made demo account.
+
+```bash
+cd backend
+npm run seed
+```
+
+### Demo Login Credentials
+| Field    | Value                  |
+|----------|------------------------|
+| Email    | demo@fintrack.app      |
+| Password | password123            |
+
+## How FinTrack Improves Daily Lives
+
+The average person loses **$348/year** to subscriptions they've forgotten about and **$1,200+/year** to poor spending habits they cannot see. FinTrack directly attacks this problem by:
+
+1. **Eliminating Financial Blind Spots** — Every dollar across every platform is visible in one dashboard.
+2. **AI-Powered Anomaly Alerts** — Unusual charges are flagged the moment they occur, preventing fraud and overspending.
+3. **Behavioral Coaching** — Personalized weekly insights like "You spent 22% more this weekend" create awareness that drives behaviour change.
+4. **Goal Accountability** — Visible savings progress bars keep users motivated and on-track toward their financial milestones.
+5. **Subscription Leakage Prevention** — Auto-detection of recurring charges and cancellation recommendations can save users hundreds per year.
+
+> FinTrack is not just a tracker — it's your personal CFO, working 24/7 to protect and grow your wealth.
+
